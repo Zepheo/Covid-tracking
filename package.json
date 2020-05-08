@@ -1,0 +1,20 @@
+{
+  "name": "covid-tracking",
+  "version": "0.0.1",
+  "description": "Covid information webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd frontend && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zepheo/Covid-tracking.git"
+  },
+  "author": "Douglas Eskelius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zepheo/Covid-tracking/issues"
+  },
+  "homepage": "https://github.com/Zepheo/Covid-tracking#readme"
+}
