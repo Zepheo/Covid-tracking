@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-import { Container, Typography, Table, TableBody, TableRow, TableCell } from "@material-ui/core";
+import { Container, Typography, Table, TableBody, TableRow, TableCell, TableHead } from "@material-ui/core";
 import Box from '@material-ui/core/Box';
 
 function App() {
@@ -22,7 +22,20 @@ function App() {
     );
   }
   return(
-    <Table>
+    <Table stickyHeader={true}>
+      <TableHead>
+        <TableRow>
+          <TableCell>
+            State
+          </TableCell>
+          <TableCell>
+            Currently hospitalized
+          </TableCell>
+          <TableCell>
+            New deaths during the last 3 days
+          </TableCell>
+        </TableRow>
+      </TableHead>
       <TableBody>
         {state.map( stateInfo => {
           return(
