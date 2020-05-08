@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get('/api', (req, res) => {
-  res.json({msg: 'hello'});
+  res.json({enpoints: 'None yet :('});
 });
 
 module.exports = app;
