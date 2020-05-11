@@ -6,7 +6,6 @@ import CovidTableEntry from './CovidTableEntry';
 import CovidTableHead from './CovidTableHead';
 
 function sorter(order, orderBy) {
-
   return function (a, b) {
 
     if (a[orderBy] === b[orderBy]) {
@@ -24,9 +23,7 @@ function sorter(order, orderBy) {
     else { 
         return a[orderBy] < b[orderBy] ? 1 : -1;
     }
-
   };
-
 }
 
 function stableSort(array, comparator) {
@@ -44,12 +41,14 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   paper: {
-    width: '100%',
     margin: theme.spacing(2),
   },
   table: {
-    minWidth: 750,
+    minWidth: 700,
   },
+  container: {
+    maxHeight: '96vh',
+  }
 }));
 
 export default function CovidTable() {
@@ -77,11 +76,10 @@ export default function CovidTable() {
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
-        <TableContainer>
+        <TableContainer className={classes.container}>
           <Table
             className={classes.table}
-            aria-labelledby="tableTitle"
-            aria-label="covid table"
+            stickyHeader
           >
             <CovidTableHead
               order={order}

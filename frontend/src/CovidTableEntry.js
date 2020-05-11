@@ -7,7 +7,7 @@ export default function CovidTableEntry({rowData}) {
       hover
       tabIndex={-1}
     >
-      <TableCell component="th" scope="row" padding="none">
+      <TableCell component="th" scope="row">
         {rowData.name}
       </TableCell>
       <TableCell align="right">{rowData.hospitalizedCurrently || 'No information available'}</TableCell>
