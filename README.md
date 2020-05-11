@@ -1,7 +1,10 @@
 # Covid-tracking
-# NOT FINISHED
+A site using the Covid Tracking Projects rest API to display 
+information about the current state of Covid 19 in the United States
 
-## TODO
-- get data on the backend
-- send data to frontend
-- style frontend, background color on header, explanation on hovereffect of headlines, padding
+# Installation
+- Clone the repository and while in the root folder run the commands
+  - "npm install"
+  - "npm start"
+in your command line tool.
+If the browser doesn't start automatically browse to http://localhost:3000
