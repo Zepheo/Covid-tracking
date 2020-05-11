@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:frontend": "cd frontend && npm start",
     "start:backend": "cd backend && npm start",
-    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "postinstall": "concurrently \"cd frontend && npm i\" \"cd backend && npm i\""
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,6 @@
   },
   "homepage": "https://github.com/Zepheo/Covid-tracking#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "concurrently": "^5.2.0",
-    "express": "^4.17.1"
+    "concurrently": "^5.2.0"
   }
 }

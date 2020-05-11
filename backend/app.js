@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const {handler} = require('./dataHandler');
+const {fetchCovidData} = require('./fetcher');
 
 const raw = require('./rawTestData/daily.json');
 
@@ -8,11 +8,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.get('/api', (req, res) => {
-  res.json({enpoints: 'None yet :('});
-});
-app.get('/api/covid', (req, res) => {
-  res.json(handler(raw));
+app.get('/api/covid', async (req, res) => {
+  res.json(await fetchCovidData(raw));
 });
 
 module.exports = app;

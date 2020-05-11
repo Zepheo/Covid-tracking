@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-import { Table, TableBody, TableContainer, Paper } from "@material-ui/core";
+import { Table, TableBody, TableContainer, Paper, CircularProgress } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles'
 import CovidTableEntry from './CovidTableEntry';
 import CovidTableHead from './CovidTableHead';
@@ -48,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     maxHeight: '96vh',
+  },
+  loading: {
+    textAlign: 'center',    
   }
 }));
 
@@ -70,7 +73,9 @@ export default function CovidTable() {
 
   if (!CovidData) {
     return (
-      <div>Loading</div>
+      <div className={classes.loading}>
+        <CircularProgress />
+      </div>
     );
   }
   return (

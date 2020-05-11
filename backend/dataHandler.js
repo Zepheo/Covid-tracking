@@ -1,6 +1,6 @@
 const stateToNameMapper = require('./stateToNameMapper');
 
-const handler = (data) => {
+function handler(data) {
   const lastDayData = data.filter( (state) => state.date === data[0].date);
 
   const threeDayDeaths = [];

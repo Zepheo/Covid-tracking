@@ -4,5 +4,4 @@
 ## TODO
 - get data on the backend
 - send data to frontend
-- display data on frontend
-- style frontend
+- style frontend, background color on header, explanation on hovereffect of headlines, padding
