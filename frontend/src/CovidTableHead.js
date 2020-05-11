@@ -36,7 +36,7 @@ const headCells = [
   { 
     id: 'lastThreeDayDeaths',
     numeric: true,
-    label: 'New deaths during the last 3 days',
+    label: 'Total new covid 19 deaths during the last 3 days',
     toolTip: 'Amount of people that have died in the state during the last 3 days'
   }
 ];

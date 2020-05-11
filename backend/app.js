@@ -2,8 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const {fetchCovidData} = require('./fetcher');
 
-const raw = require('./rawTestData/daily.json');
-
 const app = express();
 
 app.use(bodyParser.json());
